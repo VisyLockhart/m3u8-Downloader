@@ -22,8 +22,14 @@ namespace m3u8_Downloader
         }
         public static string FFMPEG_FILE_NAME
         {
-            get { return  Path.Combine(Environment.CurrentDirectory, IniHelper.getIniValue(section, "FFMPEG_FILE_NAME")); }
+            get { return IniHelper.getIniValue(section, "FFMPEG_FILE_NAME"); }
             set { IniHelper.setIniValue(section, "FFMPEG_FILE_NAME", value); }
+        }
+
+        public static string FFMPEG_FILE_PATH
+        {
+            get { return IniHelper.getIniValue(section, "FFMPEG_FILE_PATH"); }
+            set { IniHelper.setIniValue(section, "FFMPEG_FILE_PATH", value); }
         }
     }
 }
